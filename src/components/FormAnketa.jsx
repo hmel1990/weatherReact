@@ -2,6 +2,9 @@ import {useActionState} from "react";
 
 import FormState from "./FormState";
 
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 
 
 
@@ -54,8 +57,9 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* адрес */}
-                      <label htmlFor="adress" className="anketa-label">Адрес (обязательное поле):</label><br />
-                      <input
+                      <Form.Label htmlFor="adress">Адрес (обязательное поле):</Form.Label><br />
+                      {/*<label htmlFor="adress" className="anketa-label">Адрес (обязательное поле):</label><br />*/}
+                      <Form.Control
                           autoComplete="username"
                           type="text"
                           id="adress"
@@ -64,12 +68,11 @@ function FormAnketa() {
                           className="anketa-input"
                           required
                       /><br />
-
                       {/* ====================================================================== */}
 
                       {/* общая площадь */}
-                      <label htmlFor="adress" className="anketa-label">Общая площадь (обязательное поле):</label><br />
-                      <input
+                      <Form.Label htmlFor="adress" className="anketa-label">Общая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Control
                           autoComplete="livingArea"
                           type="text"
                           id="totalArea"
@@ -81,8 +84,8 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* жилая площадь */}
-                      <label htmlFor="adress" className="anketa-label">Жилая площадь (обязательное поле):</label><br />
-                      <input
+                      <Form.Label htmlFor="adress" className="anketa-label">Жилая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Control
                           // autoComplete="username"
                           type="text"
                           id="livingArea"
@@ -95,18 +98,13 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* кнопки */}
-                      <input
-                          type="submit"
-                          value="Отправить"
-                          disabled={isPending}
-                          className="anketa-button anketa-button-submit"
-                      />
-                      <input
-                          type="reset"
-                          value="Сбросить"
-                          onClick={() => formAction(new FormData())}
-                          className="anketa-button anketa-button-reset"
-                      />
+                      <Button as="input" type="submit" value={isPending ? 'Отправка…' : 'Отправить'} disabled={isPending}
+                              variant="primary" size="lg"
+                              className="m-2"/>
+                      <Button as="input" type="reset" value="Сбросить"
+                              variant="primary" size="lg"
+                              onClick={() => formAction(new FormData())}
+                              className="m-2"/>
 
                   </fieldset>
               </form>
