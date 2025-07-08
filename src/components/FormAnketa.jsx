@@ -26,7 +26,7 @@ function FormAnketa() {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ entries })
+                    body: JSON.stringify( entries)
                 });
                 let responseFromServer  = response.text();
                 console.log(responseFromServer);
