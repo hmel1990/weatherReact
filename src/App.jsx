@@ -1,13 +1,13 @@
 
 import './App.css'
-import './components/Weather.jsx'
-import Weather from "./components/Weather.jsx";
+import './components/FormAnketa.jsx'
+import FormAnketa from "./components/FormAnketa.jsx";
 
 function App() {
 
   return (
     <>
-      <Weather />
+      <FormAnketa />
     </>
   )
 }
