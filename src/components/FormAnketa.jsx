@@ -49,7 +49,7 @@ function FormAnketa() {
                   <fieldset className="anketa-fieldset">
 
 
-                      <legend className="anketa-legend">Регистрация пользователя</legend>
+                      <legend className="anketa-legend">Введите данные о квартире</legend>
 
                       {/* ====================================================================== */}
 
