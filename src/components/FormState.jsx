@@ -5,6 +5,7 @@ export default class FormState {
         adress: '',
         totalArea: '',
         livingArea: '',
+        photo: []
     };
 
     // приватное поле для хранения данных

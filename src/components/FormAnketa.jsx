@@ -22,6 +22,30 @@ function FormAnketa() {
                 // собираем все поля формы в обычный объект
                 const entries = Object.fromEntries(formData.entries());
 
+                if (formData.getAll('photo')[0] instanceof File) {
+
+                    function readFileAsBase64(file) {
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onload = () => resolve(reader.result);
+                            reader.onerror = reject;
+                            reader.readAsDataURL(file);
+                        });
+                    }
+
+                    const files = formData.getAll('photo'); //вернется массив из фото
+
+                    try
+                    {
+                            const base64Images = await Promise.all(
+                                files.map(file => readFileAsBase64(file)));
+                            entries.photo = base64Images;
+                    }
+                    catch (error) {
+                        console.error('Произошла ошибка при чтении файлов:', error);
+                    }
+                }
+
                 console.log(entries);
 
                 const response = await fetch(url, {
@@ -93,6 +117,22 @@ function FormAnketa() {
                           defaultValue={state.getField('livingArea')}
                           className="anketa-input"
                           required
+                      /><br />
+
+                      {/* ====================================================================== */}
+
+                      {/* Фото */}
+                      <Form.Label htmlFor="photo" className="anketa-label">Жилая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Control
+                          // autoComplete="username"
+                          type="file"
+                          id="photo"
+                          name="photo"
+                          defaultValue={state.getField('photo')}
+                          className="anketa-input"
+                          required
+                          accept="image/*"
+                          multiple
                       /><br />
 
                       {/* ====================================================================== */}
