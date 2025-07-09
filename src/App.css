@@ -1,5 +1,7 @@
 #root {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(42, 46, 51, 0.66);
+  padding-top: 30px;
+
   min-height: 100vh;
 }
 
@@ -12,7 +14,10 @@ html, body {
   height: 100%;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 80%;
+.main-container {
+  box-shadow:   0 0 15px rgba(0, 0, 0, 0.87);
+  padding-top: 30px;
+  border-radius: 15px;
+  background-color: rgba(105, 122, 177, 0.55);
+
 }
