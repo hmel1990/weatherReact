@@ -81,7 +81,7 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* адрес */}
-                      <Form.Label htmlFor="adress">Адрес (обязательное поле):</Form.Label><br />
+                      <Form.Label htmlFor="adress">Адрес:</Form.Label><br />
                       {/*<label htmlFor="adress" className="anketa-label">Адрес (обязательное поле):</label><br />*/}
                       <Form.Control
                           autoComplete="username"
@@ -95,7 +95,7 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* общая площадь */}
-                      <Form.Label htmlFor="adress" className="anketa-label">Общая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Label htmlFor="adress" className="anketa-label">Общая площадь:</Form.Label><br />
                       <Form.Control
                           autoComplete="livingArea"
                           type="text"
@@ -108,7 +108,7 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* жилая площадь */}
-                      <Form.Label htmlFor="adress" className="anketa-label">Жилая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Label htmlFor="adress" className="anketa-label">Жилая площадь:</Form.Label><br />
                       <Form.Control
                           // autoComplete="username"
                           type="text"
@@ -122,7 +122,7 @@ function FormAnketa() {
                       {/* ====================================================================== */}
 
                       {/* Фото */}
-                      <Form.Label htmlFor="photo" className="anketa-label">Жилая площадь (обязательное поле):</Form.Label><br />
+                      <Form.Label htmlFor="photo" className="anketa-label">Загрузите документы:</Form.Label><br />
                       <Form.Control
                           // autoComplete="username"
                           type="file"
