@@ -24,15 +24,6 @@ export default class FormState {
         return this.#fields[field];
     }
 
-    setField(field, value) {
-        this.#fields[field] = value;
-    }
-
-    // метод сброса всех полей
-    reset() {
-        this.#fields = { ...FormState.#initialFields };
-    }
-
     // метод для получения всех полей (для useActionState)
     getAllFields() {
         return { ...this.#fields };
