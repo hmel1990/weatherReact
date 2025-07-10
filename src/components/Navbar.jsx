@@ -6,7 +6,7 @@
                     <img
                         src="https://github.com/hmel1990/ProfilePhoto/blob/main/photo_2025-02-23_16-30-55.jpg?raw=true"
                         className="img-fluid"
-                        style={{height: "80px", objectFit: "contain", width: "100%", borderRadius: "15px"}}
+                        style={{height: "80px", objectFit: "contain", borderRadius: "15px"}}
                         alt="fop"
                     />
                 </a>
