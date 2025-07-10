@@ -1,9 +1,14 @@
 
  const Navbar = () =>(
-           <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
+           <nav className="navbar navbar-expand-lg bg-body-tertiary p-0 mb-4 ">
+            <div className="container-fluid" style={{ backgroundColor: "rgba(105, 122, 177, 0.55)"}}>
                 <a className="navbar-brand" href="#">
-
+                    <img
+                        src="https://github.com/hmel1990/ProfilePhoto/blob/main/photo_2025-02-23_16-30-55.jpg?raw=true"
+                        className="img-fluid"
+                        style={{height: "80px", objectFit: "contain", width: "100%", borderRadius: "15px"}}
+                        alt="fop"
+                    />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

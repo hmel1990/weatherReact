@@ -71,7 +71,7 @@ function FormAnketa() {
 
     return (
         <>
-          <div className="anketa-container">
+          <div className="anketa-container text-white">
               <form action = {formAction}>
                   <fieldset className="anketa-fieldset">
 
@@ -118,7 +118,47 @@ function FormAnketa() {
                           className="anketa-input"
                           required
                       /><br />
+                      {/* ====================================================================== */}
 
+                      {/* количество комнат */}
+                      <Form.Label htmlFor="roomsNumber" className="anketa-label">Количество комнат:</Form.Label><br />
+                      <Form.Control
+                          // autoComplete="username"
+                          type="text"
+                          id="roomsNumber"
+                          name="roomsNumber"
+                          defaultValue={state.getField('roomsNumber')}
+                          className="anketa-input"
+                          required
+                      /><br />
+
+                      {/* ====================================================================== */}
+
+                      {/* єтаж */}
+                      <Form.Label htmlFor="floor" className="anketa-label">Этаж:</Form.Label><br />
+                      <Form.Control
+                          // autoComplete="username"
+                          type="text"
+                          id="floor"
+                          name="floor"
+                          defaultValue={state.getField('floor')}
+                          className="anketa-input"
+                          required
+                      /><br />
+
+                      {/* ====================================================================== */}
+
+                      {/* єтажность */}
+                      <Form.Label htmlFor="floorNumber" className="anketa-label">Этажность:</Form.Label><br />
+                      <Form.Control
+                          // autoComplete="username"
+                          type="text"
+                          id="floorNumber"
+                          name="floorNumber"
+                          defaultValue={state.getField('floorNumber')}
+                          className="anketa-input"
+                          required
+                      /><br />
                       {/* ====================================================================== */}
 
                       {/* Фото */}

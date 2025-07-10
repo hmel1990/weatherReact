@@ -5,6 +5,9 @@ export default class FormState {
         adress: '',
         totalArea: '',
         livingArea: '',
+        roomsNumber: '',
+        floor:'',
+        floorNumber:'',
         photo: []
     };
 

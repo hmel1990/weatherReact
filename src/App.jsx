@@ -10,18 +10,15 @@ function App() {
 
   return (
     <>
+        <div className="main-wrapper">
 
-        <Navbar />
+            <Navbar className="my-navbar" />
 
-        <Container className="main-container">
-            <img
-                src="https://github.com/hmel1990/ProfilePhoto/blob/main/fop.jpg?raw=true"
-                className="img-fluid"
-                style={{height: "auto", objectFit: "contain", width: "100%", borderRadius: "15px", marginBottom:"50px"}}
-                alt="fop"
-            />
-            <FormAnketa />
-        </Container>
+            <Container className="main-container">
+                <FormAnketa />
+            </Container>
+
+        </div>
 
 
     </>

@@ -1,5 +1,5 @@
 #root {
-  background-color: rgba(42, 46, 51, 0.66);
+  background-color: rgba(105, 122, 177, 0.55);
 
   min-height: 100vh;
 }
@@ -17,9 +17,16 @@ html, body {
   box-shadow:   0 0 15px rgba(0, 0, 0, 0.87);
   padding-top: 30px;
   border-radius: 15px;
-  background-color: rgba(105, 122, 177, 0.55);
+  background-color: rgba(71, 88, 140, 0.93);
 
 }
-.fulwidth {
-  border: 2px red solid;
+
+
+.main-wrapper{
+  background-image:  url(https://github.com/hmel1990/ProfilePhoto/blob/main/fontanopera.jpg?raw=true);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
+
