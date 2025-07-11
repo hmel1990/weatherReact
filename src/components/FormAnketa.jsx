@@ -14,7 +14,7 @@ function FormAnketa() {
     const [state, formAction, isPending] = useActionState(
         async (_prevState, formData) =>
             // _prevState - это текущее состояние формы (объект FormState) на момент отправки формы
-            // FormData — это встроенный объект браузера, часть стандартного JavaScript API (Web API), доступного во всех современных браузерах
+            // FormData — это встроенный объект браузера, часть стандартного JavaScript API (Web API), доступного во всех современных браузерах, содержит то что ввели в поля формы
             //_prevState, FormData стандартные параметры для функции,  react сам решает, что передать в эту функцию, и передаёт два параметра: _prevState и formData
         {
             try
@@ -24,7 +24,7 @@ function FormAnketa() {
 
                 if (formData.getAll('photo')[0] instanceof File) {
 
-                    function readFileAsBase64(file) {
+                    async function readFileAsBase64(file) {
                         return new Promise((resolve, reject) => {
                             const reader = new FileReader();
                             reader.onload = () => resolve(reader.result);

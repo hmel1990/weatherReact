@@ -8,7 +8,8 @@ export default class FormState {
         roomsNumber: '',
         floor:'',
         floorNumber:'',
-        photo: []
+        photo: [],
+        question:''
     };
 
     // приватное поле для хранения данных

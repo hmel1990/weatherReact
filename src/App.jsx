@@ -4,6 +4,7 @@ import './components/FormAnketa.jsx'
 import FormAnketa from "./components/FormAnketa.jsx";
 import Navbar from "./components/Navbar";
 import {Container} from "react-bootstrap";
+import FormQuestion from "./components/FormQuestion.jsx";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
             <Container className="main-container">
                 <FormAnketa />
+                <FormQuestion />
             </Container>
 
         </div>
