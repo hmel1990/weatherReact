@@ -9,6 +9,16 @@ class FormQuestion extends Component {
             question: '',
             isSending: false,
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        console.log ('Компонент отрисовался')
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log ('произошло изменение')
+        console.log(prevState);
     }
 
     handleChange = (event) => {
@@ -46,6 +56,7 @@ class FormQuestion extends Component {
             this.setState({ isSending: false });
         }
     };
+    handleClick = () => this.setState({ question: '' })
 
     render() {
         const { question, isSending } = this.state;
@@ -78,7 +89,7 @@ class FormQuestion extends Component {
                         variant="primary"
                         type="reset"
                         className="m-2"
-                        onClick={() => this.setState({ question: '' })}
+                        onClick={this.handleClick}
                     >
                         Сбросить
                     </Button>
